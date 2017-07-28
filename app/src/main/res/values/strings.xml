@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">PartidoTruco</string>
+    <string name="plus">+</string>
+    <string name="envido">ENVIDO</string>
+    <string name="real_envido">REAL ENVIDO</string>
+    <string name="falta_envido">FALTA ENVIDO</string>
+    <string name="truco">TRUCO</string>
+    <string name="re_truco">RE TRUCO</string>
+    <string name="vale_cuatro">VALE CUATRO</string>
+    <string name="reset">Reset</string>
+    <string name="partido_de_truco">Partido de Truco</string>
 </resources>

@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBoton">#009DFF</color>
+    <color name="colorEnvido">#90CAF9</color>
+    <color name="colorRealEnvido">#64B5F6</color>
+    <color name="colorFaltaEnvido">#42A5F5</color>
+    <color name="colorTruco">#2196F3</color>
+    <color name="colorReTruco">#1E88E5</color>
+    <color name="colorValeCuatro">#1976D2</color>
+    <color name="colorPunto">#BBDEFB</color>
+    <color name="colorReset">#1565C0</color>
 </resources>

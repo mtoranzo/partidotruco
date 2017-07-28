@@ -1,18 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.notarget.partidotruco.MainActivity">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="5dp"
+        android:text="@string/partido_de_truco"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Nosot@s"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_nos_plus"
+                    style="@style/ButtonFont"
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBoton"
+                    android:text="@string/plus" />
+
+                <TextView
+                    android:id="@+id/tv_nos_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/bt_nos_minus"
+                    style="@style/ButtonFont"
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBoton"
+                    android:text="-" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_nos_envido"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEnvido"
+                android:text="@string/envido" />
+
+            <Button
+                android:id="@+id/bt_nos_real_envido"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorRealEnvido"
+                android:text="@string/real_envido" />
+
+            <Button
+                android:id="@+id/bt_nos_falta_envido"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorFaltaEnvido"
+                android:text="@string/falta_envido" />
+
+            <Button
+                android:id="@+id/bt_nos_truco"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorTruco"
+                android:text="@string/truco" />
+
+            <Button
+                android:id="@+id/bt_nos_re_truco"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorReTruco"
+                android:text="@string/re_truco" />
+
+            <Button
+                android:id="@+id/bt_nos_vale_cuatro"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorValeCuatro"
+                android:text="@string/vale_cuatro" />
+
+            <Button
+                android:id="@+id/bt_nos_punto"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPunto"
+                android:text="1 PUNTO" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Ell@s"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_ell_plus"
+                    style="@style/ButtonFont"
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBoton"
+                    android:text="@string/plus" />
+
+                <TextView
+                    android:id="@+id/tv_ell_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/bt_ell_minus"
+                    style="@style/ButtonFont"
+                    android:layout_width="15dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBoton"
+                    android:text="-" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_ell_envido"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorEnvido"
+                android:text="@string/envido" />
+
+            <Button
+                android:id="@+id/bt_ell_real_envido"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorRealEnvido"
+                android:text="@string/real_envido" />
+
+            <Button
+                android:id="@+id/bt_ell_falta_envido"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorFaltaEnvido"
+                android:text="@string/falta_envido" />
+
+            <Button
+                android:id="@+id/bt_ell_truco"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorTruco"
+                android:text="@string/truco" />
+
+            <Button
+                android:id="@+id/bt_ell_re_truco"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorReTruco"
+                android:text="@string/re_truco" />
+
+            <Button
+                android:id="@+id/bt_ell_vale_cuatro"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorValeCuatro"
+                android:text="@string/vale_cuatro" />
+
+            <Button
+                android:id="@+id/bt_ell_punto"
+                style="@style/ButtonFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPunto"
+                android:text="1 PUNTO" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_reset"
+        style="@style/ButtonFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/colorReset"
+        android:text="@string/reset" />
+</LinearLayout>
