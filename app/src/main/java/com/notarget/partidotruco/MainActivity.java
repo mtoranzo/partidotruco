@@ -226,5 +226,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void doReset() {
+        scoreNos = 0;
+        tvNosScore.setText(scoreNos);
+
+        scoreEll = 0;
+        tvEllScore.setText(scoreEll);
     }
 }
