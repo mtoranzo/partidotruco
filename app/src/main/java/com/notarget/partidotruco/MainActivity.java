@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 setNosScore(2);
-                ;
             }
         });
 
@@ -172,7 +171,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 setEllScore(2);
-                ;
             }
         });
 
