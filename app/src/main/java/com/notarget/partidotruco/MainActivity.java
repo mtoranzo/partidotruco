@@ -1,5 +1,7 @@
 package com.notarget.partidotruco;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -199,8 +201,7 @@ public class MainActivity extends AppCompatActivity {
         btReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (validReset())
-                    doReset();
+                validReset();
             }
         });
     }
@@ -210,7 +211,13 @@ public class MainActivity extends AppCompatActivity {
         if (scoreNos < 0)
             scoreNos = 0;
 
-        tvNosScore.setText(scoreNos);
+        if (scoreNos >= 30) {
+            doAlert("Nosotr@s ganamos!");
+            doReset();
+            return;
+        }
+
+        tvNosScore.setText(Integer.toString(scoreNos));
     }
 
     protected void setEllScore(int value) {
@@ -218,18 +225,48 @@ public class MainActivity extends AppCompatActivity {
         if (scoreEll < 0)
             scoreEll = 0;
 
-        tvEllScore.setText(scoreEll);
+        if (scoreEll >= 30) {
+            doAlert("Ell@s ganaron!");
+            doReset();
+            return;
+        }
+
+        tvEllScore.setText(Integer.toString(scoreEll));
     }
 
-    protected boolean validReset() {
-        return true;
+    protected void validReset() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setMessage("Confirma reiniciar la partida?")
+                .setPositiveButton("SI", dialogClickListener)
+                .setNegativeButton("NO", dialogClickListener)
+                .show();
     }
+
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    doReset();
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    break;
+            }
+        }
+    };
 
     protected void doReset() {
         scoreNos = 0;
-        tvNosScore.setText(scoreNos);
+        tvNosScore.setText(Integer.toString(scoreNos));
 
         scoreEll = 0;
-        tvEllScore.setText(scoreEll);
+        tvEllScore.setText(Integer.toString(scoreEll));
+    }
+
+    private void doAlert(String pMessage) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setMessage(pMessage);
+        alertDialog.show();
     }
 }
